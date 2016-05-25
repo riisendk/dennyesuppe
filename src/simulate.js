@@ -1,6 +1,6 @@
 var _ = require('lodash');
 
-const stage1Teams = [
+export const stage1Teams = [
     { ID: 1, Name: 'AGF', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.6 },
     { ID: 2, Name: 'Brøndby', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.65 },
     { ID: 3, Name: 'Esbjerg', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.25 },
@@ -17,13 +17,13 @@ const stage1Teams = [
     { ID: 14, Name: 'AaB', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.55 }
 ];
 
-const firstDiv = [
+export const firstDiv = [
     { ID: 15, Name: 'Hobro', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.2 },
     { ID: 16, Name: 'Vejle', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.15 },
-    { ID: 17, Name: 'HB Køge', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.1 },
+    { ID: 17, Name: 'HB Køge', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.1 }
 ];
 
-const simulate = (team, teams) => {
+export const simulate = (team, teams) => {
 
     const isPlayed = (t) => {
         let found = false;
@@ -43,8 +43,8 @@ const simulate = (team, teams) => {
         let ip = isPlayed(t);
         if (!ip) {
 
-            team1Prop = calculatePropability(team.Skill); // 0.6 * 450 = 270
-            team2Prop = calculatePropability(t.Skill); // 0.65 * 450 = 293
+            let team1Prop = calculatePropability(team.Skill); // 0.6 * 450 = 270
+            let team2Prop = calculatePropability(t.Skill); // 0.65 * 450 = 293
 
             let randNumber = Math.floor(Math.random() * (1000 - 1 + 1)) + 1;
 
@@ -65,7 +65,7 @@ const simulate = (team, teams) => {
     });
 };
 
-const reset = (stageTeams, keepPoints) => {
+export const reset = (stageTeams, keepPoints) => {
     stageTeams.forEach((t) => {
         if (!keepPoints) {
             t.Points = [];
@@ -77,7 +77,7 @@ const reset = (stageTeams, keepPoints) => {
     });
 };
 
-const simulateStage = (stageTeams) => {
+export const simulateStage = (stageTeams) => {
 
     let count = 0;
     for (i = 0; i < stageTeams.length * 2; i++) {
@@ -118,7 +118,7 @@ const simulateStage = (stageTeams) => {
 
     return sorted;
 
-};
+};/*
 
 console.log('Stage 1:\r\n');
 
@@ -247,4 +247,4 @@ let stage3RelPlayed6 = simulateStage(stage3Relegation6);
 
 console.log('\r\nDirekte nedrykker:\r\n');
 
-console.log(stage3RelPlayed4[1].Name);
+console.log(stage3RelPlayed4[1].Name);*/

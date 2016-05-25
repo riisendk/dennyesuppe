@@ -1,0 +1,15 @@
+/* Base Application Styles */
+body {
+    color: #fff;
+    background: url('/images/1.jpg');
+    background-size: cover;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+    
+    header {
+        text-align: center;
+    }
+}
