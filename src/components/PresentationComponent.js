@@ -2,8 +2,6 @@
 
 import React from 'react';
 
-require('styles//Presentation.scss');
-
 class PresentationComponent extends React.Component {
     
     constructor(props) {
@@ -16,7 +14,7 @@ class PresentationComponent extends React.Component {
     }
     
     render() {
-        const classes = 'step-' + this.props.state;
+        const classes = 'step-' + this.props.step;
         return (
             <div className={classes}>
                 <p>Efter 21 år med den samme ligastruktur er det fra sæsonen 2016/17 tid til at prøve noget nyt i den danske Superliga. I stedet for den 'skæve' struktur med 33 kampe og den høje risiko for nedrykning, indføres nu et slutspil efter 26 kampe – og nok så væsentligt udvides rækken med to hold.</p>
@@ -31,9 +29,5 @@ class PresentationComponent extends React.Component {
 }
 
 PresentationComponent.displayName = 'PresentationComponent';
-
-// Uncomment properties you need
-// PresentationComponent.propTypes = {};
-// PresentationComponent.defaultProps = {};
 
 export default PresentationComponent;

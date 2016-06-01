@@ -1,15 +1,297 @@
-/* Base Application Styles */
+@import 'family';
+$top-6: greenyellow;
+$bottom-8-1: lightsalmon;
+$bottom-8-2: lightsteelblue;
+
 body {
     color: #fff;
-    background: url('/images/1.jpg');
+    background: url('/images/bg1.jpg');
     background-size: cover;
+    background-position: center -240px;
+    background-repeat: no-repeat;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .container {
     width: 800px;
     margin: auto;
     
+    .steps {
+        background-color: rgba(0, 0, 0, .6);
+        padding: 1em;
+    }
+    
     header {
         text-align: center;
+        
+        > * {
+            text-shadow: 2px 2px 2px #000;
+        }
+        
+        h1 {
+            font-size: 4.2em;
+            margin-bottom: .25em;
+        }
+        
+        p {
+            font-size: 1.8em;
+            margin-top: 0;
+        }
+    }
+    
+    p {
+        line-height: 1.5;
+        
+        a {
+            color: lighten($color: #ccc, $amount: 0.2);
+            
+        }
+    }
+    
+    button {
+        display: block;
+        margin: auto;
+        padding: .6em .8em;
+        background-color: mediumseagreen;
+        border: 0;
+        outline: 0;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.1em; 
+        cursor: pointer;  
+    }
+    
+    ul.teams {
+        
+        margin: 0;
+        padding: 0;
+        
+        li {
+            width: 109px;
+            height: 120px;
+            float: left;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-indent: -9999px;
+            background-size: 80px;
+            background-repeat: no-repeat;
+            
+            &.agf {
+                background-image: url('/images/agf.png');
+            }
+            
+            &.bif {
+                background-image: url('/images/bif.png');
+            }
+            
+            &.efb {
+                background-image: url('/images/efb.png');
+            }
+            
+            &.fck {
+                background-image: url('/images/fck.png');
+            }
+            
+            &.fcm {
+                background-image: url('/images/fcm.png');
+            }
+            
+            &.fcn {
+                background-image: url('/images/fcn.png');
+            }                                        
+            
+            &.ach {
+                background-image: url('/images/ach.png');
+            }
+            
+            &.lbk {
+                background-image: url('/images/lbk.png');
+            }
+            
+            &.ob {
+                background-image: url('/images/ob.png');
+            }  
+
+            &.rfc {
+                background-image: url('/images/rfc.png');
+            }
+            
+            &.sif {
+                background-image: url('/images/sif.png');
+            }        
+            
+            &.sje {
+                background-image: url('/images/sje.png');
+            } 
+            
+            &.vff {
+                background-image: url('/images/vff.png');
+            }
+            
+            &.aab {
+                background-image: url('/images/aab.png');
+            }                                                     
+        }
+        
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }    
+    
+    table.teams {
+        width: 500px;
+        margin: auto;
+        
+        thead {
+            th {
+                text-align: center;
+            }
+            
+            tr th:first-child {
+                text-align: left;
+            }
+        }
+        
+        tbody {
+            tr {
+                td {
+                    
+                    text-align: center;
+                    
+                    &:first-child {
+                        width: 150px;
+                        text-align: left;
+                    }
+                }
+                
+                &:nth-child(even) {
+                    td {
+                        background: rgba(255, 255, 255, .1);
+                    }
+                }                                       
+            }  
+            
+            &.stage-1 {
+                tr {
+                    &:nth-child(6) {
+                        td {
+                            border-bottom: 1px dashed #fff;
+                        }                
+                    }
+                    
+                    @include first(6) {
+                        color: $top-6;
+                    }                
+                    
+                    @include between(7,7) {
+                        color: $bottom-8-1;
+                    }
+                    
+                    @include between(10,11) {
+                        color: $bottom-8-1;
+                    }
+                    
+                    @include between(14,14) {
+                        color: $bottom-8-1;
+                    }
+                    
+                    @include between(8,9) {
+                        color: $bottom-8-2;
+                    }
+                    
+                    @include between(12,13) {
+                        color: $bottom-8-2;
+                    }                    
+                }
+            }
+            
+            &.champs {
+                tr {                                    
+                    @include between(1,1) {
+                        color: darkgoldenrod
+                    }
+                    
+                    @include between(2,2) {
+                        color: silver;
+                    }
+                    
+                    @include between(3,3) {
+                        color: brown;
+                    } 
+                }                
+            }
+            
+            $rel-top-1: green;
+            $rel-top-2: blue;
+            $rel-bot-1: red;
+            $rel-bot-2: yellow;
+            
+            &.rel {
+                tr {
+                    &:nth-child(2) {
+                        td {
+                            border-bottom: 1px dashed #fff;
+                        }                
+                    }
+                }
+                
+                &.rel-1 {
+                    tr {
+                        @include between(1,1) {
+                            color: $rel-top-1;
+                        }                        
+                        
+                        @include between(2,2) {
+                            color: $rel-top-2;
+                        }
+                        
+                        @include between(3,3) {
+                            color: $rel-bot-1;
+                        }                        
+                        
+                        @include between(4,4) {
+                            color: $rel-bot-2;
+                        }                                                
+                    }
+                }
+                
+                &.rel-2 {
+                    tr {                        
+                        @include between(1,1) {
+                            color: $rel-top-2;
+                        }
+                        
+                        @include between(2,2) {
+                            color: $rel-top-1;
+                        }    
+                        
+                        @include between(3,3) {
+                            color: $rel-bot-2;
+                        }                        
+                        
+                        @include between(4,4) {
+                            color: $rel-bot-1;
+                        }                                            
+                    }
+                }                
+            }          
+        }        
+    }
+    
+    span {
+        &.top-6 {
+            color: $top-6;           
+        }
+        
+        &.bottom-8-1 {
+            color: $bottom-8-1;
+        }
+        
+        &.bottom-8-2 {
+            color: $bottom-8-2;
+        }        
     }
 }

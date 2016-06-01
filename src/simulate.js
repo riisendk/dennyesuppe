@@ -1,20 +1,20 @@
 var _ = require('lodash');
 
 export const stage1Teams = [
-    { ID: 1, Name: 'AGF', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.6 },
-    { ID: 2, Name: 'Brøndby', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.65 },
-    { ID: 3, Name: 'Esbjerg', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.25 },
-    { ID: 4, Name: 'FC København', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 1 },
-    { ID: 5, Name: 'FC Midtjylland', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.9 },
-    { ID: 6, Name: 'FC Nordsjælland', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.4 },
-    { ID: 7, Name: 'Horsens', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.1 },
-    { ID: 8, Name: 'Lyngby', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.2 },
-    { ID: 9, Name: 'OB', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.7 },
-    { ID: 10, Name: 'Randers', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.45 },
-    { ID: 11, Name: 'Silkeborg', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.2 },
-    { ID: 12, Name: 'SønderjyskE', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.45 },
-    { ID: 13, Name: 'Viborg', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.25 },
-    { ID: 14, Name: 'AaB', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.55 }
+    { ID: 1, Name: 'AGF', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.6, className: 'agf' },
+    { ID: 2, Name: 'Brøndby', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.65, className: 'bif' },
+    { ID: 3, Name: 'Esbjerg', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.25, className: 'efb' },
+    { ID: 4, Name: 'FC København', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 1, className: 'fck' },
+    { ID: 5, Name: 'FC Midtjylland', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.9, className: 'fcm' },
+    { ID: 6, Name: 'FC Nordsjælland', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.4, className: 'fcn' },
+    { ID: 7, Name: 'Horsens', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.1, className: 'ach' },
+    { ID: 8, Name: 'Lyngby', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.2, className: 'lbk' },
+    { ID: 9, Name: 'OB', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.7, className: 'ob' },
+    { ID: 10, Name: 'Randers', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.45, className: 'rfc' },
+    { ID: 11, Name: 'Silkeborg', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.2, className: 'sif' },
+    { ID: 12, Name: 'SønderjyskE', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.45, className: 'sje' },
+    { ID: 13, Name: 'Viborg', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.25, className: 'vff' },
+    { ID: 14, Name: 'AaB', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.55, className: 'aab' }
 ];
 
 export const firstDiv = [
@@ -75,12 +75,14 @@ export const reset = (stageTeams, keepPoints) => {
         t.D = 0;
         t.L = 0;
     });
+    
+    return stageTeams;
 };
 
 export const simulateStage = (stageTeams) => {
 
     let count = 0;
-    for (i = 0; i < stageTeams.length * 2; i++) {
+    for (var i = 0; i < stageTeams.length * 2; i++) {
 
         let team = stageTeams[count];
         let otherTeams = (teams) => {
