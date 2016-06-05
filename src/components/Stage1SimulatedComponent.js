@@ -1,26 +1,12 @@
 'use strict';
 
 import React from 'react';
-
-import { simulateStage, reset } from '../simulate';
+import { Link } from 'react-router';
 
 class Stage1SimulatedComponent extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleClick = this.handleClick.bind(this);
-        this.state = {
-            teams: simulateStage(this.props.teams)
-        };
-    }
-    
-    handleClick() {
-        this.props.setTeams(reset(this.state.teams, true));
-        this.props.stepForward();
-    }    
-    
+
     render() {
-        const classes = 'step-' + this.props.step;
-        const renderTeams = this.state.teams.map((t) => {
+        const renderTeams = this.props.teams.stage1Simulated.map((t) => {
             return (
                 <tr key={t.ID}>
                     <td>{t.Name}</td>
@@ -30,10 +16,10 @@ class Stage1SimulatedComponent extends React.Component {
                     <td>{t.L}</td>
                     <td>{t.Points}</td>
                 </tr>
-            )    
+            )
         });
         return (
-            <div className={classes}>
+            <div className="step-3">
                 <h2>Fase 1 - Grundspillet</h2>
                 <p>Et færdigspillet grundspil kunne se ud som følger. Alle hold har mødt hinanden to gange, og pointene er uddelt, som vi kender det.</p>
                 <table className="teams">
@@ -52,8 +38,8 @@ class Stage1SimulatedComponent extends React.Component {
                     </tbody>
                 </table>
                 <p>De <span className="top-6">seks øverste</span> hold kvalificerer sig til mesterskabsslutspillet, mens de nederste otte hold fordeles i to kvalifikationspuljer: <span className="bottom-8-1">nr. 7, 10, 11 og 14</span> i den ene gruppe, og <span className="bottom-8-2">nr. 8, 9, 12 og 13</span> i den anden gruppe.</p>
-                <p>
-                    <button onClick={this.handleClick}>Ok, det er jo til at forstå - vis mig slutspillet!</button>
+                <p className="button">
+                    <Link to={'stage2-intro'}>Ok, det er jo til at forstå - vis mig slutspillet!</Link>
                 </p>
             </div>
         );

@@ -1,27 +1,15 @@
 'use strict';
 
 import React from 'react';
+import { Link } from 'react-router';
 
 class Stage2IntroComponent extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleClick = this.handleClick.bind(this);
-        this.state = {
-            teams: this.props.teams
-        };
-    }
-    
-    handleClick() {
-        this.props.stepForward();
-    }    
-    
+
     render() {
-        const classes = 'step-' + this.props.step;
-        
-        const teams = this.state.teams;
+        const teams = this.props.teams.stage1Reset;
         const bot8_1 = [teams[6], teams[9], teams[10], teams[13]];
-        const bot8_2 = [teams[7], teams[8], teams[11], teams[12]];        
-        
+        const bot8_2 = [teams[7], teams[8], teams[11], teams[12]];
+
         const renderTeams = (teams) => {
             return (
                 teams.map((t) => {
@@ -36,11 +24,11 @@ class Stage2IntroComponent extends React.Component {
                         </tr>
                     );
                 })
-            );            
-        };                      
-        
+            );
+        };
+
         return (
-            <div className={classes}>
+            <div className="step-4">
                 <h2>Fase 2 - Slutspillet</h2>
                 <p>Det vigtigste at bemærke sig i forbindelse med slutspillet er, at ALLE point tages med over. Der foregår altså hverken en nulstilling eller en halvering af pointtallet fra grundspillet. Det vil sige, at de tre 'grupper' (mesterskabsslutspillet og de to kvalifikationspuljer) tager deres udgangspunkt som følger.</p>
                 <h3>Mesterskabsspillet:</h3>
@@ -59,7 +47,7 @@ class Stage2IntroComponent extends React.Component {
                         {renderTeams(teams.slice(0, 6))}
                     </tbody>
                 </table>
-                <h3>Kvalifikationspulje 1:</h3>                
+                <h3>Kvalifikationspulje 1:</h3>
                 <table className="teams">
                     <thead>
                         <tr>
@@ -74,7 +62,7 @@ class Stage2IntroComponent extends React.Component {
                     <tbody>
                         {renderTeams(bot8_1)}
                     </tbody>
-                </table>                
+                </table>
                 <h3>Kvalifikationspulje 1:</h3>
                 <table className="teams">
                     <thead>
@@ -93,11 +81,11 @@ class Stage2IntroComponent extends React.Component {
                 </table>
                 <p>
                     I slutspillet mødes alle hold også to gange – ude og hjemme – dvs. der spilles 10 kampe i mesterskabs&shy;slutspillet og seks kampe i de to kvalifikationspuljer.
-                </p>                
-                <p>
-                    <button onClick={this.handleClick}>Simulér slutspillet</button>
                 </p>
-                
+                <p className="button">
+                    <Link to={'stage2-simulated'}>Simulér slutspillet</Link>
+                </p>
+
             </div>
         );
     }
