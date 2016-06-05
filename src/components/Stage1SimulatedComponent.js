@@ -2,8 +2,25 @@
 
 import React from 'react';
 import { Link } from 'react-router';
+var Loading = require('react-loading');
 
 class Stage1SimulatedComponent extends React.Component {
+
+    constructor(props) {
+        super(props);
+        
+        this.state = {
+            simulating: true
+        }
+    }
+    
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({
+                simulating: false
+            });
+        }, 7500);
+    }
 
     render() {
         const renderTeams = this.props.teams.stage1Simulated.map((t) => {
@@ -18,6 +35,16 @@ class Stage1SimulatedComponent extends React.Component {
                 </tr>
             )
         });
+        
+        if (this.state.simulating) {
+            return (
+                <div className="step-3 simulating">
+                    <h3>Simulerer grundspillet – vent venligst!</h3>
+                    <Loading type='bars' color='#fff' />
+                </div>
+            );
+        }
+        
         return (
             <div className="step-3">
                 <h2>Fase 1 - Grundspillet</h2>

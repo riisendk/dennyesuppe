@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router';
 var Loading = require('react-loading');
 
-class Stage2SimulatedComponent extends React.Component {
+class Stage3SimulatedRelegationComponent extends React.Component {
 
     constructor(props) {
         super(props);
@@ -62,16 +62,16 @@ class Stage2SimulatedComponent extends React.Component {
         
         if (this.state.simulating) {
             return (
-                <div className="step-5 simulating">
-                    <h3>Simulerer slutspillet – vent venligst!</h3>
+                <div className="step-7 simulating">
+                    <h3>Simulerer nedrykningsspillet – vent venligst!</h3>
                     <Loading type='bars' color='#fff' />
                 </div>
             );
         }        
 
         return (
-            <div className="step-5">
-                <h2>Fase 2 - Slutspillet</h2>
+            <div className="step-7">
+                <h2>Fase 3 - Nedrykningsspillet</h2>
                 <h3>Mesterskabsspillet:</h3>
                 <p>Efter 10 runder i mesterskabsslutspillet kåres en dansk mester anno 2016/17 – nr. 2 får sølv og nr. 3 får bronze. De øvrige hold sikrer sig endnu en sæson i landets bedste række. Det lavest placerede hold, dvs. tredjepladsen i øjeblikket, som vanligt vil blive tildelt en Europa League-plads, skal vi lige holde in mente til senere.</p>
                 <h3>Mesterskabsspillet:</h3>
@@ -130,7 +130,7 @@ class Stage2SimulatedComponent extends React.Component {
                     Både Europa League-kvalifikationen og nedrykningsspillet afgøres i en cup-turnering med to semifinaler (ude og hjemme) og en finale, der ligeledes spilles over to kampe. Parringen af modstanderne foregår således, at <span className="rel-top-1">nr. 1 fra den ene pulje</span> møder <span className="rel-top-2">nr. 2 fra den anden pulje</span> og omvendt. Tilsvarende med <span className="rel-bot-1">nr. 3</span> og <span className="rel-bot-2">nr. 4</span> og omvendt. Lad os starte med den positive del – Europa League-kvalifikationen.
                 </p>
                 <p className="button">
-                    <Link to={'stage3-simulated-europe'}>Simulér Europa League-kvalifikationen</Link>
+                    <Link to={'recap'}>Opsummering og ofte stillede spørgsmål</Link>
                 </p>
 
             </div>
@@ -138,6 +138,6 @@ class Stage2SimulatedComponent extends React.Component {
     }
 }
 
-Stage2SimulatedComponent.displayName = 'Stage2SimulatedComponent';
+Stage3SimulatedRelegationComponent.displayName = 'Stage3SimulatedRelegationComponent';
 
-export default Stage2SimulatedComponent;
+export default Stage3SimulatedRelegationComponent;

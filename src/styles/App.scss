@@ -2,6 +2,10 @@
 $top-6: greenyellow;
 $bottom-8-1: lightsalmon;
 $bottom-8-2: lightsteelblue;
+$rel-top-1: palegreen;
+$rel-top-2: dodgerblue;
+$rel-bot-1: orangered;
+$rel-bot-2: lightyellow;
 
 body {
     color: #fff;
@@ -32,7 +36,15 @@ body {
         
         @media (max-width: 768px) {
             margin: 1em;
-        }        
+        }
+        
+        .simulating {
+            text-align: center;
+            
+            > div {
+                margin: auto;
+            }
+        }      
     }
     
     header {
@@ -45,6 +57,11 @@ body {
         h1 {
             font-size: 4.2em;
             margin-bottom: .25em;
+            
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
 
             @media (max-width: 768px) {
                 font-size: 3.2em;
@@ -67,6 +84,10 @@ body {
                 font-size: 1em;
             }            
         }
+    }
+    
+    footer {
+        text-align: center;
     }
     
     p {
@@ -263,7 +284,7 @@ body {
             &.champs {
                 tr {                                    
                     @include between(1,1) {
-                        color: darkgoldenrod
+                        color: darkgoldenrod;
                     }
                     
                     @include between(2,2) {
@@ -274,12 +295,7 @@ body {
                         color: brown;
                     } 
                 }                
-            }
-            
-            $rel-top-1: green;
-            $rel-top-2: blue;
-            $rel-bot-1: red;
-            $rel-bot-2: yellow;
+            }           
             
             &.rel {
                 tr {
@@ -344,6 +360,22 @@ body {
         
         &.bottom-8-2 {
             color: $bottom-8-2;
-        }        
+        }
+        
+        &.rel-top-1 {
+            color: $rel-top-1;
+        }
+        
+        &.rel-top-2 {
+            color: $rel-top-2;
+        }
+        
+        &.rel-bot-1 {
+            color: $rel-bot-1;
+        }
+        
+        &.rel-bot-2 {
+            color: $rel-bot-2;
+        }                        
     }
 }

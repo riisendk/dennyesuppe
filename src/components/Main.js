@@ -2,7 +2,6 @@ require('normalize.css/normalize.css');
 require('styles/App.scss');
 
 import React from 'react';
-import _ from 'lodash';
 
 import { stage1Teams, firstDiv, simulateStage, reset } from '../simulate';
 
@@ -55,7 +54,7 @@ class AppComponent extends React.Component {
                 stage3Rel5: [],
                 stage3Rel5Simulated: [],
                 stage3Rel6: [],
-                stage3Rel6Simulated: [],
+                stage3Rel6Simulated: []
             }
         };
     }
@@ -175,8 +174,6 @@ class AppComponent extends React.Component {
         teams.stage3Rel6Simulated = simulateStage(teams.stage3Rel6);
 
         this.setTeams(teams);
-
-        console.log(teams);
     }
 
     componentWillMount() {
@@ -194,12 +191,16 @@ class AppComponent extends React.Component {
         return (
             <div className="container">
                 <header>
-                    <h1>Den nye Suppe.dk</h1>
+                    <h1><a href="/">Den nye Suppe.dk</a></h1>
                     <p>Forstå den nye ligastruktur i Superligaen</p>
                 </header>
                 <div className="steps">
                     {children}
                 </div>
+                <footer>                    
+                    <p>Denne hjemmeside har på ingen måde relation til DBU, Divisionsforeningen, Spillerforeningen, rettighedshavere til Alka Superligaen, Hypercube eller andre, der har aktier i ligastrukturen. Der tages forbehold for fejl og mangler. Alle simuleringer er baseret på en subjektiv vægtning af holdenes styrker, men er ellers 100 % tilfældige fra gang til gang.</p>
+                    <p>&copy; 2016 Thomas Riis Hansen – spørgsmål kan stilles til <a href="https://twitter.com/Riisen">@Riisen</a> på Twitter</p>  
+                </footer>
             </div>
         );
     }
