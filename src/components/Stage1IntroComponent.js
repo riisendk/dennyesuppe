@@ -18,7 +18,7 @@ class Stage1IntroComponent extends React.Component {
                 <ul className="teams">
                     {renderTeams}
                 </ul>
-                <p>Disse hold møder, i det vi kalder grundspillet, hinanden ude og hjemme – i alt 26 kampe. Hvordan kampene fordeles på tv-stationerne, og på hvilke kampdage/tidspunkter, ligger ikke endeligt fast. Der holdes vinterpause efter runde 21 i starten af december 2016.</p>
+                <p>Disse hold møder, i det vi kalder grundspillet, hinanden ude og hjemme – i alt 26 kampe. Kampprogrammet for grundspillet kan findes på <a href="http://www.superliga.dk/sites/default/files/alka_superliga_program.pdf">Alka Superligaens hjemmeside</a>.</p>
                 <p className="button">
                     <Link to={'stage1-simulated'}>Simulér grundspillet</Link>
                 </p>

@@ -8,18 +8,18 @@ class Stage2SimulatedComponent extends React.Component {
 
     constructor(props) {
         super(props);
-        
+
         this.state = {
             simulating: true
         }
     }
-    
+
     componentDidMount() {
         setTimeout(() => {
             this.setState({
                 simulating: false
             });
-        }, 7500);
+        }, 5000);
     }
 
     render() {
@@ -59,7 +59,7 @@ class Stage2SimulatedComponent extends React.Component {
                 })
             );
         };
-        
+
         if (this.state.simulating) {
             return (
                 <div className="step-5 simulating">
@@ -67,7 +67,7 @@ class Stage2SimulatedComponent extends React.Component {
                     <Loading type='bars' color='#fff' />
                 </div>
             );
-        }        
+        }
 
         return (
             <div className="step-5">
@@ -92,7 +92,7 @@ class Stage2SimulatedComponent extends React.Component {
                     </tbody>
                 </table>
                 <p>
-                    Efter de seks kampe i kvalifikationsspillet bliver de to puljer delt op nok engang. De to øverste hold i hver pulje klarer frisag i Superligaen, og skal nu spille om Europa League-deltagelse. De to nederste hold i hver pulje skal kæmpe om nedrykning. Det vigtigste at forstå her, er at <strong>der ingen direkte nedrykker er fra Superligaen!</strong> Af de fire hold er det sikkert, at ét hold rykker ned, men det bliver ikke afgjort på dette tidspunkt af turneringen.
+                    Efter de seks kampe i kvalifikationsspillet bliver de to puljer delt op nok engang. De to øverste hold i hver pulje klarer frisag i Superligaen, og skal nu spille om Europa League-deltagelse. De to nederste hold i hver pulje skal kæmpe om nedrykning. Det vigtigste at forstå her, er at <strong>der på dette tidspunkt ikke er direkte nedrykker fra Superligaen!</strong> Af de fire dårligste hold er det sikkert, at ét hold rykker ned, men det bliver ikke afgjort på før senere i turneringen.
                 </p>
                 <h3>Kvalifikationspulje 1:</h3>
                 <table className="teams">
@@ -110,7 +110,7 @@ class Stage2SimulatedComponent extends React.Component {
                         {renderTeams(rel1, false)}
                     </tbody>
                 </table>
-                <h3>Kvalifikationspulje 1:</h3>
+                <h3>Kvalifikationspulje 2:</h3>
                 <table className="teams">
                     <thead>
                         <tr>

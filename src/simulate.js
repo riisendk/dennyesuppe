@@ -1,26 +1,26 @@
 var _ = require('lodash');
 
 export const stage1Teams = [
-    { ID: 1, Name: 'AGF', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 2.2, className: 'agf' },
-    { ID: 2, Name: 'Brøndby', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 3.2, className: 'bif' },
-    { ID: 3, Name: 'Esbjerg', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 1, className: 'efb' },
-    { ID: 4, Name: 'FC København', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 12, className: 'fck' },
-    { ID: 5, Name: 'FC Midtjylland', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 4, className: 'fcm' },
-    { ID: 6, Name: 'FC Nordsjælland', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 1.8, className: 'fcn' },
-    { ID: 7, Name: 'Horsens', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.5, className: 'ach' },
-    { ID: 8, Name: 'Lyngby', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.8, className: 'lbk' },
-    { ID: 9, Name: 'OB', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 2.8, className: 'ob' },
-    { ID: 10, Name: 'Randers', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 3, className: 'rfc' },
-    { ID: 11, Name: 'Silkeborg', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.3, className: 'sif' },
-    { ID: 12, Name: 'SønderjyskE', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 3.5, className: 'sje' },
-    { ID: 13, Name: 'Viborg', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 1.8, className: 'vff' },
-    { ID: 14, Name: 'AaB', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 3.4, className: 'aab' }
+    { ID: 1, Name: 'AGF', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 5.4, className: 'agf' },
+    { ID: 2, Name: 'Brøndby', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 6.2, className: 'bif' },
+    { ID: 3, Name: 'Esbjerg', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 2.2, className: 'efb' },
+    { ID: 4, Name: 'FC København', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 9.4, className: 'fck' },
+    { ID: 5, Name: 'FC Midtjylland', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 8.6, className: 'fcm' },
+    { ID: 6, Name: 'FC Nordsjælland', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 3.1, className: 'fcn' },
+    { ID: 7, Name: 'Horsens', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 1.9, className: 'ach' },
+    { ID: 8, Name: 'Lyngby', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 2, className: 'lbk' },
+    { ID: 9, Name: 'OB', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 7.2, className: 'ob' },
+    { ID: 10, Name: 'Randers', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 5.4, className: 'rfc' },
+    { ID: 11, Name: 'Silkeborg', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 2.5, className: 'sif' },
+    { ID: 12, Name: 'SønderjyskE', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 6, className: 'sje' },
+    { ID: 13, Name: 'Viborg', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 3.6, className: 'vff' },
+    { ID: 14, Name: 'AaB', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 6.9, className: 'aab' }
 ];
 
 export const firstDiv = [
-    { ID: 15, Name: 'Hobro', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.2 },
-    { ID: 16, Name: 'Vejle', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.15 },
-    { ID: 17, Name: 'HB Køge', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 0.1 }
+    { ID: 15, Name: 'Hobro', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 1.2 },
+    { ID: 16, Name: 'Vejle', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 1 },
+    { ID: 17, Name: 'HB Køge', Points: [], W: 0, D: 0, L: 0, Played: [], Skill: 1 }
 ];
 
 const simulate = (team, teams) => {
@@ -36,21 +36,21 @@ const simulate = (team, teams) => {
     };
 
     const calculatePropability = (skill1, skill2) => {
+        
         let v1 = skill1 / (skill1 + skill2);
         let v2 = skill2 / (skill1 + skill2);
-
-        let d = Math.abs(v1 - v2);
-
-        let p0 = (1 - d);
-        let p1 = v1 * d;
-        let p2 = v2 * d;
-
-        let times = 1000;
-        return {
-            Team1: p1 * times + times / 6,
-            Team2: p2 * times + times / 6,
-            Draw: p0 * times - times / 3
+        
+        let draw = 180;
+        let w1 = v1 * (1000 - draw)/2;
+        let w2 = v2 * (1000 - draw)/2;
+        
+        let prop = {
+            Team1: w1,
+            Team2: w2,
+            Draw: draw
         };
+        
+        return prop;
     };
 
     teams.forEach((t) => {
@@ -59,9 +59,9 @@ const simulate = (team, teams) => {
 
             let prop = calculatePropability(team.Skill, t.Skill);
 
-            let randNumber = Math.floor(Math.random() * (1000 - 1 + 1)) + 1;
+            let randNumber = Math.floor(Math.random() * (prop.Team1 + prop.Team2 + prop.Draw)) + 1;
 
-            if (randNumber > 1000 - prop.Team2) {
+            if (randNumber > (prop.Team1 + prop.Team2 + prop.Draw) - prop.Team2) {
                 t.W = t.W + 1;
                 team.L = team.L + 1;
             } else if (randNumber > prop.Team1) {

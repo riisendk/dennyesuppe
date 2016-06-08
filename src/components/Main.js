@@ -189,17 +189,19 @@ class AppComponent extends React.Component {
         });
 
         return (
-            <div className="container">
-                <header>
-                    <h1><a href="/">Den nye Suppe.dk</a></h1>
-                    <p>Forstå den nye ligastruktur i Superligaen</p>
-                </header>
-                <div className="steps">
-                    {children}
+            <div>
+                <div className="container">
+                    <header>
+                        <h1><a href="/">Den nye Suppe.dk</a></h1>
+                        <p>Forstå den nye ligastruktur i Superligaen</p>
+                    </header>
+                    <div className="steps">
+                        {children}
+                    </div>
                 </div>
-                <footer>                    
-                    <p>Denne hjemmeside har på ingen måde relation til DBU, Divisionsforeningen, Spillerforeningen, rettighedshavere til Alka Superligaen, Hypercube eller andre, der har aktier i ligastrukturen. Der tages forbehold for fejl og mangler. Alle simuleringer er baseret på en subjektiv vægtning af holdenes styrker, men er ellers 100 % tilfældige fra gang til gang.</p>
-                    <p>&copy; 2016 Thomas Riis Hansen – spørgsmål kan stilles til <a href="https://twitter.com/Riisen">@Riisen</a> på Twitter</p>  
+                <footer>
+                    <p>Denne hjemmeside har på ingen måde relation til DBU, Divisionsforeningen, Spillerforeningen, rettighedshavere til Alka Superligaen, Hypercube eller andre, der har aktier i ligastrukturen. Der tages forbehold for fejl og mangler. Alle simuleringer er baseret på en subjektiv vægtning af holdenes styrker, men er ellers 100 % tilfældige fra gang til gang. Siden sætter et par cookies i forbindelse med brug af Google Analytics – så ved du det...</p>
+                    <p>&copy; 2016 Thomas Riis Hansen – spørgsmål kan stilles til <a href="https://twitter.com/Riisen"> @Riisen</a> på Twitter</p>
                 </footer>
             </div>
         );

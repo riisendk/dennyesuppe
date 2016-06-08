@@ -19,7 +19,7 @@ class Stage1SimulatedComponent extends React.Component {
             this.setState({
                 simulating: false
             });
-        }, 7500);
+        }, 5000);
     }
 
     render() {

@@ -8,6 +8,7 @@ import Stage2IntroComponent from './components/Stage2IntroComponent';
 import Stage2SimulatedComponent from './components/Stage2SimulatedComponent';
 import Stage3SimulatedEuropeComponent from './components/Stage3SimulatedEuropeComponent';
 import Stage3SimulatedRelegationComponent from './components/Stage3SimulatedRelegationComponent';
+import FAQComponent from './components/FAQComponent';
 
 import AppComponent from './components/Main';
 
@@ -20,5 +21,6 @@ export default (
         <Route path="stage2-simulated" component={Stage2SimulatedComponent} />
         <Route path="stage3-simulated-europe" component={Stage3SimulatedEuropeComponent} />
         <Route path="stage3-simulated-relegation" component={Stage3SimulatedRelegationComponent} />
+        <Route path="faq" component={FAQComponent} />
 	</Route>
 );
