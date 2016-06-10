@@ -5,7 +5,10 @@ $bottom-8-2: lightsteelblue;
 $rel-top-1: palegreen;
 $rel-top-2: dodgerblue;
 $rel-bot-1: orangered;
-$rel-bot-2: lightyellow;
+$rel-bot-2: mediumpurple;
+$gold: darkgoldenrod;
+$silver: silver;
+$bronze: brown;
 
 body {
     color: #fff;
@@ -15,121 +18,121 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
-    
+
     @media (max-width: 1920px) and (max-height: 1080px) {
         background-image: url('/images/bg1-1920x1080.jpg');
     }
-    
+
     @media (max-width: 1650px) and (max-height: 1080px) {
         background-image: url('/images/bg1-1650x1080.jpg');
-    }    
-    
+    }
+
     @media (max-width: 1600px) and (max-height: 900px) {
         background-image: url('/images/bg1-1600x900.jpg');
-    }    
-    
+    }
+
     @media (max-width: 1440px) and (max-height: 900px) {
         background-image: url('/images/bg1-1440x900.jpg');
-    }    
-    
+    }
+
     @media (max-width: 1366px) and (max-height: 768px) {
         background-image: url('/images/bg1-1366x768.jpg');
-    }    
-    
+    }
+
     @media (max-width: 1280px) and (max-height: 800px) {
         background-image: url('/images/bg1-1280x800.jpg');
-    }    
-    
+    }
+
     @media (max-width: 1280px) and (max-height: 720px) {
         background-image: url('/images/bg1-1280x720.jpg');
-    }    
-    
-    @media only screen 
-    and (min-device-width : 768px) 
-    and (max-device-width : 1024px) 
+    }
+
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
     and (orientation : landscape)
-    and (-webkit-min-device-pixel-ratio: 2) { 
+    and (-webkit-min-device-pixel-ratio: 2) {
         background-image: url('/images/bg1-2048x3072.jpg');
         background-size: 1024px 1536px;
     }
-    
-    @media only screen 
-    and (min-device-width : 768px) 
-    and (max-device-width : 1024px) 
+
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
     and (orientation : portrait)
-    and (-webkit-min-device-pixel-ratio: 2) { 
+    and (-webkit-min-device-pixel-ratio: 2) {
         background-image: url('/images/bg1-1536x4096.jpg');
         background-size: 768px 2048px;
-    } 
-    
-    @media only screen 
-    and (min-device-width : 414px) 
-    and (max-device-width : 736px) 
-    and (orientation : landscape) {
-         
     }
-    
-    @media only screen 
-    and (min-device-width : 414px) 
-    and (max-device-width : 736px) 
+
+    @media only screen
+    and (min-device-width : 414px)
+    and (max-device-width : 736px)
+    and (orientation : landscape) {
+
+    }
+
+    @media only screen
+    and (min-device-width : 414px)
+    and (max-device-width : 736px)
     and (orientation : portrait) {
-          
-    }        
-    
-    @media only screen 
-    and (min-device-width : 375px) 
-    and (max-device-width : 667px) 
+
+    }
+
+    @media only screen
+    and (min-device-width : 375px)
+    and (max-device-width : 667px)
     and (orientation : landscape) {
-            
+
     }
-    
-    @media only screen 
-    and (min-device-width : 375px) 
-    and (max-device-width : 667px) 
-    and (orientation : portrait) { 
+
+    @media only screen
+    and (min-device-width : 375px)
+    and (max-device-width : 667px)
+    and (orientation : portrait) {
         background-image: url('/images/bg1-750x2667.jpg');
-        background-size: 375px 1334px;    
+        background-size: 375px 1334px;
     }
-    
-}    
+
+}
 
 .container {
     width: 800px;
     margin: auto;
-    
+
     @media (max-width: 768px) {
         width: auto;
     }
-    
+
     .steps {
         background-color: rgba(0, 0, 0, .6);
         padding: 1em;
         box-sizing: border-box;
-        
+
         @media (max-width: 768px) {
             margin: 1em;
         }
-        
+
         .simulating {
             text-align: center;
-            
+
             > div {
                 margin: auto;
             }
-        }      
+        }
     }
-    
+
     header {
         text-align: center;
-        
+
         > * {
             text-shadow: 2px 2px 2px #000;
         }
-        
+
         h1 {
             font-size: 4.2em;
             margin-bottom: .25em;
-            
+
             a {
                 color: #fff;
                 text-decoration: none;
@@ -138,43 +141,43 @@ body {
             @media (max-width: 768px) {
                 font-size: 3.2em;
             }
-            
+
             @media (max-width: 480px) {
                 font-size: 2.8em;
             }
         }
-        
+
         p {
             font-size: 1.8em;
             margin-top: 0;
-            
+
             @media (max-width: 768px) {
                 font-size: 1.4em;
-            }                        
-            
+            }
+
             @media (max-width: 480px) {
                 font-size: 1em;
-            }            
-        }
-    }    
-    
-    p {
-        line-height: 1.5;
-        
-        a {
-            color: lighten($color: #ccc, $amount: 0.2);
-            
+            }
         }
     }
-    
+
+    p {
+        line-height: 1.5;
+
+        a {
+            color: lighten($color: #ccc, $amount: 0.2);
+
+        }
+    }
+
     ul {
         line-height: 1.7;
     }
-    
+
     p.button {
-        
+
         text-align: center;
-        
+
         a {
             display: inline-block;
             margin: auto;
@@ -184,16 +187,16 @@ body {
             outline: 0;
             color: #fff;
             text-transform: uppercase;
-            font-size: 1.1em; 
-            text-decoration: none;  
-        }        
-    }   
-    
+            font-size: 1.1em;
+            text-decoration: none;
+        }
+    }
+
     ul.teams {
-        
+
         margin: 0;
         padding: 0;
-        
+
         li {
             width: 109px;
             height: 120px;
@@ -205,281 +208,293 @@ body {
             background-size: 80px;
             background-repeat: no-repeat;
             background-position: center;
-            
+
             @media (max-width: 768px) {
                 width: 50px;
                 height: 70px;
                 background-size: 40px;
-            }            
-            
+            }
+
             @media (max-width: 480px) {
                 width: 50px;
                 height: 70px;
                 background-size: 40px;
             }
-            
+
             &.agf {
                 background-image: url('/images/agf.png');
             }
-            
+
             &.bif {
                 background-image: url('/images/bif.png');
             }
-            
+
             &.efb {
                 background-image: url('/images/efb.png');
             }
-            
+
             &.fck {
                 background-image: url('/images/fck.png');
             }
-            
+
             &.fcm {
                 background-image: url('/images/fcm.png');
             }
-            
+
             &.fcn {
                 background-image: url('/images/fcn.png');
-            }                                        
-            
+            }
+
             &.ach {
                 background-image: url('/images/ach.png');
             }
-            
+
             &.lbk {
                 background-image: url('/images/lbk.png');
             }
-            
+
             &.ob {
                 background-image: url('/images/ob.png');
-            }  
+            }
 
             &.rfc {
                 background-image: url('/images/rfc.png');
             }
-            
+
             &.sif {
                 background-image: url('/images/sif.png');
-            }        
-            
+            }
+
             &.sje {
                 background-image: url('/images/sje.png');
-            } 
-            
+            }
+
             &.vff {
                 background-image: url('/images/vff.png');
             }
-            
+
             &.aab {
                 background-image: url('/images/aab.png');
-            }                                                     
+            }
         }
-        
+
         &:after {
             content: '';
             display: block;
             clear: both;
         }
-    }    
-    
+    }
+
     table.teams {
         width: 500px;
         margin: auto;
-        
+
         @media (max-width: 480px) {
             width: auto;
         }
-        
+
         + table.teams {
             margin-top: 1em;
         }
-        
+
         thead {
             th {
                 text-align: center;
             }
-            
+
             tr th:first-child {
                 text-align: left;
             }
         }
-        
+
         tbody {
             tr {
                 td {
-                    
+
                     text-align: center;
-                    
+
                     &:first-child {
                         width: 150px;
                         text-align: left;
                     }
                 }
-                
+
                 &:nth-child(even) {
                     td {
                         background-image: rgba(255, 255, 255, .1);
                     }
-                }                                       
-            }  
-            
+                }
+            }
+
             &.stage-1 {
                 tr {
                     &:nth-child(6) {
                         td {
                             border-bottom: 1px dashed #fff;
-                        }                
+                        }
                     }
-                    
+
                     @include first(6) {
                         color: $top-6;
-                    }                
-                    
+                    }
+
                     @include between(7,7) {
                         color: $bottom-8-1;
                     }
-                    
+
                     @include between(10,11) {
                         color: $bottom-8-1;
                     }
-                    
+
                     @include between(14,14) {
                         color: $bottom-8-1;
                     }
-                    
+
                     @include between(8,9) {
                         color: $bottom-8-2;
                     }
-                    
+
                     @include between(12,13) {
                         color: $bottom-8-2;
-                    }                    
+                    }
                 }
             }
-            
+
             &.champs {
-                tr {                                    
+                tr {
                     @include between(1,1) {
-                        color: darkgoldenrod;
+                        color: $gold;
                     }
-                    
+
                     @include between(2,2) {
-                        color: silver;
+                        color: $silver;
                     }
-                    
+
                     @include between(3,3) {
-                        color: brown;
-                    } 
-                }                
-            }           
-            
+                        color: $bronze;
+                    }
+                }
+            }
+
             &.rel {
                 tr {
                     &:nth-child(2) {
                         td {
                             border-bottom: 1px dashed #fff;
-                        }                
+                        }
                     }
                 }
-                
+
                 &.rel-1 {
                     tr {
                         @include between(1,1) {
                             color: $rel-top-1;
-                        }                        
-                        
+                        }
+
                         @include between(2,2) {
                             color: $rel-top-2;
                         }
-                        
+
                         @include between(3,3) {
                             color: $rel-bot-1;
-                        }                        
-                        
+                        }
+
                         @include between(4,4) {
                             color: $rel-bot-2;
-                        }                                                
+                        }
                     }
                 }
-                
+
                 &.rel-2 {
-                    tr {                        
+                    tr {
                         @include between(1,1) {
                             color: $rel-top-2;
                         }
-                        
+
                         @include between(2,2) {
                             color: $rel-top-1;
-                        }    
-                        
+                        }
+
                         @include between(3,3) {
                             color: $rel-bot-2;
-                        }                        
-                        
+                        }
+
                         @include between(4,4) {
                             color: $rel-bot-1;
-                        }                                            
+                        }
                     }
-                }                
-            }  
-            
+                }
+            }
+
             &.europe {
                 tr {
                     &:nth-child(1) {
-                        
+
                         color: $rel-top-1;
-                        
-                        td {                            
+
+                        td {
                             border-bottom: 1px dashed #fff;
-                        }                
+                        }
                     }
-                }                
+                }
             }
-            
+
             &.rel-cup {
                 tr {
                     &:nth-child(2) {
-                        
+
                         color: $rel-bot-1;
-                        
-                        td {                            
+
+                        td {
                             border-top: 1px dashed #fff;
-                        }                
-                    }                    
+                        }
+                    }
                 }
-            }        
-        }        
+            }
+        }
     }
-    
+
     span {
         &.top-6 {
-            color: $top-6;           
+            color: $top-6;
         }
-        
+
         &.bottom-8-1 {
             color: $bottom-8-1;
         }
-        
+
         &.bottom-8-2 {
             color: $bottom-8-2;
         }
-        
+
         &.rel-top-1 {
             color: $rel-top-1;
         }
-        
+
         &.rel-top-2 {
             color: $rel-top-2;
         }
-        
+
         &.rel-bot-1 {
             color: $rel-bot-1;
         }
-        
+
         &.rel-bot-2 {
             color: $rel-bot-2;
-        }                        
-    }    
+        }
+
+        &.gold {
+            color: $gold;
+        }
+
+        &.silver {
+            color: $silver;
+        }
+
+        &.bronze {
+            color: $bronze;
+        }
+    }
 }
 
 footer {
@@ -489,8 +504,8 @@ footer {
     font-size: .85em;
     line-height: 1.4;
     margin-top: 10em;
-    
+
     a {
-        color: lighten($color: #ccc, $amount: 0.2);    
+        color: lighten($color: #ccc, $amount: 0.2);
     }
 }

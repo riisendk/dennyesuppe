@@ -19,7 +19,7 @@ class FAQComponent extends React.Component {
                 );
             }
         };
-        
+
         const rel2League = t.stage3Rel5Simulated[1].ID < 15;
         const rel3League = t.stage3Rel6Simulated[1].ID < 15;
 
@@ -38,7 +38,7 @@ class FAQComponent extends React.Component {
                 );
             }
         };
-        
+
         const renderRelegationSentence2 = () => {
             if (!rel2League && rel3League) {
                 return (
@@ -62,7 +62,7 @@ class FAQComponent extends React.Component {
         return (
             <div className="step-8">
                 <h2>Opsummering og ofte stillede spørgsmål</h2>
-                <p>Og således kom vi igennem en simulering af en Superliga-sæson med den nye struktur. {t.stage2ChampsSimulated[0].Name} blev danske mestre, {t.stage2ChampsSimulated[1].Name} vandt sølv og {t.stage2ChampsSimulated[2].Name} bronze. {renderEuropeSentence() }</p>
+                <p>Og således kom vi igennem en simulering af en Superliga-sæson med den nye struktur. <span className="gold">{t.stage2ChampsSimulated[0].Name}</span> blev danske mestre, <span className="silver">{t.stage2ChampsSimulated[1].Name}</span> vandt sølv og <span className="bronze">{t.stage2ChampsSimulated[2].Name}</span> bronze. {renderEuropeSentence() }</p>
                 <p>{t.stage3Rel4Simulated[1].Name} rykkede direkte ned i 1. division{renderRelegationSentence1()}{renderRelegationSentence2()}</p>
                 <p>Indviklet? Tja, al begyndelse er jo svær, og man skal holde tungen lige i munden for at forstå måske især nedrykningsspillet, og det kræver nok også en del tilvænning, at en europæisk plads pludselig er i spil for hold, der er sluttet langt fra toppen. For at opsummere er her de oftest stillede spørgsmål i relation til strukturen.</p>
                 <ul>

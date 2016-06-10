@@ -126,7 +126,7 @@ class AppComponent extends React.Component {
             teams.stage3Europe3Reset[0]
         ];
 
-        teams.stage3Europe4Simulated = simulateStage(teams.stage3Europe4);
+        teams.stage3Europe4Simulated = simulateStage(teams.stage3Europe4, 1);
 
         teams.stage3Rel1 = [
             teams.stage2Rel1Reset[2],

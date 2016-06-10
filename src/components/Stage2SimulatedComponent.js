@@ -74,7 +74,6 @@ class Stage2SimulatedComponent extends React.Component {
                 <h2>Fase 2 - Slutspillet</h2>
                 <h3>Mesterskabsspillet:</h3>
                 <p>Efter 10 runder i mesterskabsslutspillet kåres en dansk mester anno 2016/17 – nr. 2 får sølv og nr. 3 får bronze. De øvrige hold sikrer sig endnu en sæson i landets bedste række. Det lavest placerede hold, dvs. tredjepladsen i øjeblikket, som vanligt vil blive tildelt en Europa League-plads, skal vi lige holde in mente til senere.</p>
-                <h3>Mesterskabsspillet:</h3>
                 <table className="teams">
                     <thead>
                         <tr>
@@ -91,6 +90,7 @@ class Stage2SimulatedComponent extends React.Component {
                         {renderTeams(champs, true)}
                     </tbody>
                 </table>
+                <h3>Kvalifikationsspillet:</h3>
                 <p>
                     Efter de seks kampe i kvalifikationsspillet bliver de to puljer delt op nok engang. De to øverste hold i hver pulje klarer frisag i Superligaen, og skal nu spille om Europa League-deltagelse. De to nederste hold i hver pulje skal kæmpe om nedrykning. Det vigtigste at forstå her, er at <strong>der på dette tidspunkt ikke er direkte nedrykker fra Superligaen!</strong> Af de fire dårligste hold er det sikkert, at ét hold rykker ned, men det bliver ikke afgjort på før senere i turneringen.
                 </p>
@@ -127,7 +127,7 @@ class Stage2SimulatedComponent extends React.Component {
                     </tbody>
                 </table>
                 <p>
-                    Både Europa League-kvalifikationen og nedrykningsspillet afgøres i en cup-turnering med to semifinaler (ude og hjemme) og en finale, der ligeledes spilles over to kampe. Parringen af modstanderne foregår således, at <span className="rel-top-1">nr. 1 fra den ene pulje</span> møder <span className="rel-top-2">nr. 2 fra den anden pulje</span> og omvendt. Tilsvarende med <span className="rel-bot-1">nr. 3</span> og <span className="rel-bot-2">nr. 4</span> og omvendt. Lad os starte med den positive del – Europa League-kvalifikationen.
+                    Både Europa League-kvalifikationen og nedrykningsspillet afgøres i en cup-turnering med to semifinaler (ude og hjemme) og en finale, der ligeledes spilles over to kampe. Parringen af modstanderne foregår således, at <span className="rel-top-1">nr. 1 fra den ene pulje</span> møder <span className="rel-top-1">nr. 2 fra den anden pulje</span> og <span className="rel-top-2">omvendt</span>. Tilsvarende med <span className="rel-bot-1">nr. 3</span> og <span className="rel-bot-1">nr. 4</span> og <span className="rel-bot-2">omvendt</span>. Lad os starte med den positive del – Europa League-kvalifikationen.
                 </p>
                 <p className="button">
                     <Link to={'stage3-simulated-europe'}>Simulér Europa League-kvalifikationen</Link>

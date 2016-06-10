@@ -123,7 +123,7 @@ class Stage3SimulatedEuropeComponent extends React.Component {
 
                 <h3>Kvalifikation til Europa League:</h3>
 
-                <p>Endelig mødes vinderen af finalen tredjepladsen fra mesterskabsspillet i kampen om den tilbageværende europæiske plads. Det tabende hold fra finalen er ligeledes sikret en plads i den efterfølgende Superliga-sæson.</p>
+                <p>Endelig mødes vinderen af finalen tredjepladsen fra mesterskabsspillet i kampen om den tilbageværende europæiske plads – modsat alle de andre cup-kampe i turneringen afgøres dette opgør dog kun over en enkelt kamp med hjemmebanefordelen til tredjepladsen!</p>
 
                 <table className="teams">
                     <thead>
@@ -141,7 +141,7 @@ class Stage3SimulatedEuropeComponent extends React.Component {
                     </tbody>
                 </table>
 
-                <p>Hermed er det afgjort, hvem der vinder guld, sølv og bronze, og hvem, der har kvalificeret sig til de europæiske turneringer. Tilbage er blot af få afgjort, hvem der rykker ned...</p>
+                <p>Hermed er det afgjort, hvem der vinder guld (<span className="gold">{this.props.teams.stage2ChampsSimulated[0].Name}</span>), sølv (<span className="silver">{this.props.teams.stage2ChampsSimulated[1].Name}</span>) og bronze (<span className="bronze">{this.props.teams.stage2ChampsSimulated[2].Name}</span>), og hvem, der har kvalificeret sig til de europæiske turneringer ({this.props.teams.stage2ChampsSimulated[0].Name}, {this.props.teams.stage2ChampsSimulated[1].Name} og {this.props.teams.stage3Europe4Simulated[0].Name}). Tilbage er blot af få afgjort, hvem der rykker ned...</p>
 
                 <p className="button">
                     <Link to={'stage3-simulated-relegation'}>Simulér nedrykningsspillet</Link>

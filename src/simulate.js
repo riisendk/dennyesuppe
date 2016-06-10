@@ -36,20 +36,20 @@ const simulate = (team, teams) => {
     };
 
     const calculatePropability = (skill1, skill2) => {
-        
+
         let v1 = skill1 / (skill1 + skill2);
         let v2 = skill2 / (skill1 + skill2);
-        
+
         let draw = 180;
         let w1 = v1 * (1000 - draw)/2;
         let w2 = v2 * (1000 - draw)/2;
-        
+
         let prop = {
             Team1: w1,
             Team2: w2,
             Draw: draw
         };
-        
+
         return prop;
     };
 
@@ -92,9 +92,9 @@ const clone = (original) => {
 }
 
 export const reset = (stageTeams, keepPoints) => {
-    
+
     stageTeams = clone(stageTeams);
-    
+
     stageTeams.forEach((t) => {
         if (!keepPoints) {
             t.Points = [];
@@ -108,12 +108,12 @@ export const reset = (stageTeams, keepPoints) => {
     return stageTeams;
 };
 
-export const simulateStage = (stageTeams) => {
+export const simulateStage = (stageTeams, rounds = 2) => {
 
     stageTeams = clone(stageTeams);
 
     let count = 0;
-    for (var i = 0; i < stageTeams.length * 2; i++) {
+    for (var i = 0; i < stageTeams.length * rounds; i++) {
 
         let team = stageTeams[count];
         let otherTeams = (teams) => {
