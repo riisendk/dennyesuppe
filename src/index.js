@@ -11,7 +11,11 @@ function logPageView() {
     ga.pageview(window.location.pathname);
 }
 
-ReactDOM.render(
-    <Router history={browserHistory} routes={routes} onUpdate={logPageView} />,
-    document.getElementById('app')
-);
+export const init = () => {
+    ReactDOM.render(
+        <Router history={browserHistory} routes={routes} onUpdate={logPageView} />,
+        document.getElementById('app')
+    );
+}
+
+init();
