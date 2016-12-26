@@ -2,7 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { init } from '../index';
+import init from '../init';
 
 class FAQComponent extends React.Component {
 
