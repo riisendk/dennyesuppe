@@ -10,16 +10,8 @@ class Stage1SimulatedComponent extends React.Component {
         super(props);
         
         this.state = {
-            simulating: true
+            simulating: false
         }
-    }
-    
-    componentDidMount() {
-        setTimeout(() => {
-            this.setState({
-                simulating: false
-            });
-        }, 5000);
     }
 
     render() {
@@ -48,7 +40,7 @@ class Stage1SimulatedComponent extends React.Component {
         return (
             <div className="step-3">
                 <h2>Fase 1 - Grundspillet</h2>
-                <p>Et færdigspillet grundspil kunne se ud som følger. Alle hold har mødt hinanden to gange, og pointene er uddelt, som vi kender det.</p>
+                <p>Det færdigspillede grundspil ser således ud. Alle hold har mødt hinanden to gange, og pointene er uddelt, som vi kender det.</p>
                 <table className="teams">
                     <thead>
                         <tr>
@@ -64,9 +56,9 @@ class Stage1SimulatedComponent extends React.Component {
                         {renderTeams}
                     </tbody>
                 </table>
-                <p>De <span className="top-6">seks øverste</span> hold kvalificerer sig til mesterskabsslutspillet, mens de nederste otte hold fordeles i to kvalifikationspuljer: <span className="bottom-8-1">nr. 7, 10, 11 og 14</span> i den ene gruppe, og <span className="bottom-8-2">nr. 8, 9, 12 og 13</span> i den anden gruppe.</p>
+                <p>De <span className="top-6">seks øverste</span> hold har kvalificeret sig til mesterskabsslutspillet, mens de nederste otte hold er fordelt i to kvalifikationspuljer: <span className="bottom-8-1">nr. 7, 10, 11 og 14</span> i den ene gruppe, og <span className="bottom-8-2">nr. 8, 9, 12 og 13</span> i den anden gruppe.</p>
                 <p className="button">
-                    <Link to={'stage2-intro'}>Ok, det er jo til at forstå - vis mig slutspillet!</Link>
+                    <Link to={'stage2-intro'}>Så langt, så godt - lad os simulere slutspillet!</Link>
                 </p>
             </div>
         );

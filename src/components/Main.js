@@ -71,7 +71,7 @@ class AppComponent extends React.Component {
         teams.firstDiv = firstDiv;
         teams.stage1Init = stage1Teams;
 
-        teams.stage1Simulated = simulateStage(teams.stage1Init);
+        teams.stage1Simulated = simulateStage(teams.stage1Init, 2, true); // Passthrough
         teams.stage1Reset = reset(teams.stage1Simulated, true);
 
         teams.stage2Champs = teams.stage1Reset.slice(0, 6);

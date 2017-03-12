@@ -18,9 +18,9 @@ class Stage1IntroComponent extends React.Component {
                 <ul className="teams">
                     {renderTeams}
                 </ul>
-                <p>Disse hold møder, i det vi kalder grundspillet, hinanden ude og hjemme – i alt 26 kampe. Kampprogrammet for grundspillet kan findes på <a href="http://www.superliga.dk/sites/default/files/alka_superliga_program.pdf">Alka Superligaens hjemmeside</a>.</p>
+                <p>Disse hold møder, i det vi kalder grundspillet, hinanden ude og hjemme – i alt 26 kampe. Sidste runde af grundspillet blev afviklet søndag d. 19. marts 2017.</p>
                 <p className="button">
-                    <Link to={'stage1-simulated'}>Simulér grundspillet</Link>
+                    <Link to={'stage1-simulated'}>Vis resultatet af grundspillet</Link>
                 </p>
             </div>
         );
