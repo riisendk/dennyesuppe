@@ -1,21 +1,20 @@
 var _ = require('lodash');
 
 export const stage1Teams = [
-    { ID: 4, Name: 'FC København', Points: 61, W: 18, D: 7, L: 0, Played: [], Skill: 9.8, className: 'fck' },
-    { ID: 2, Name: 'Brøndby', Points: 49, W: 14, D: 7, L: 4, Played: [], Skill: 7.2, className: 'bif' },
-    { ID: 8, Name: 'Lyngby', Points: 39, W: 11, D: 6, L: 8, Played: [], Skill: 4.4, className: 'lbk' },
-    { ID: 5, Name: 'FC Midtjylland', Points: 38, W: 10, D: 8, L: 7, Played: [], Skill: 6.6, className: 'fcm' },
-    { ID: 12, Name: 'SønderjyskE', Points: 36, W: 9, D: 9, L: 7, Played: [], Skill: 4.8, className: 'sje' },
-    { ID: 10, Name: 'Randers', Points: 33, W: 9, D: 6, L: 10, Played: [], Skill: 4.2, className: 'rfc' },
-    { ID: 14, Name: 'AaB', Points: 33, W: 9, D: 6, L: 10, Played: [], Skill: 4.6, className: 'aab' },    
-    { ID: 6, Name: 'FC Nordsjælland', Points: 32, W: 8, D: 8, L: 9, Played: [], Skill: 3.9, className: 'fcn' },    
-    { ID: 11, Name: 'Silkeborg', Points: 30, W: 7, D: 9, L: 9, Played: [], Skill: 3.2, className: 'sif' },
-    { ID: 7, Name: 'Horsens', Points: 28, W: 7, D: 7, L: 11, Played: [], Skill: 1.5, className: 'ach' },
-    { ID: 1, Name: 'AGF', Points: 25, W: 6, D: 7, L: 12, Played: [], Skill: 2.4, className: 'agf' },
-    { ID: 9, Name: 'OB', Points: 25, W: 6, D: 7, L: 12, Played: [], Skill: 5.2, className: 'ob' },
-    { ID: 3, Name: 'Esbjerg', Points: 23, W: 5, D: 8, L: 12, Played: [], Skill: 1.2, className: 'efb' },
-    { ID: 13, Name: 'Viborg', Points: 22, W: 5, D: 7, L: 13, Played: [], Skill: 1.2, className: 'vff' }
-    
+    { ID: 4, Name: 'FC København', Points: 64, W: 19, D: 7, L: 0, Played: [], Skill: 9.8, className: 'fck' },
+    { ID: 2, Name: 'Brøndby', Points: 52, W: 15, D: 7, L: 4, Played: [], Skill: 8.2, className: 'bif' },
+    { ID: 8, Name: 'Lyngby', Points: 39, W: 11, D: 6, L: 9, Played: [], Skill: 5.4, className: 'lbk' },
+    { ID: 12, Name: 'SønderjyskE', Points: 39, W: 10, D: 9, L: 7, Played: [], Skill: 5.8, className: 'sje' },
+    { ID: 5, Name: 'FC Midtjylland', Points: 38, W: 10, D: 8, L: 8, Played: [], Skill: 4.6, className: 'fcm' },    
+    { ID: 6, Name: 'FC Nordsjælland', Points: 35, W: 9, D: 8, L: 9, Played: [], Skill: 3.9, className: 'fcn' },        
+    { ID: 10, Name: 'Randers', Points: 33, W: 9, D: 6, L: 11, Played: [], Skill: 3.6, className: 'rfc' },
+    { ID: 14, Name: 'AaB', Points: 33, W: 9, D: 6, L: 11, Played: [], Skill: 4.6, className: 'aab' },    
+    { ID: 11, Name: 'Silkeborg', Points: 30, W: 7, D: 9, L: 10, Played: [], Skill: 3.5, className: 'sif' },
+    { ID: 7, Name: 'Horsens', Points: 29, W: 7, D: 8, L: 11, Played: [], Skill: 1.5, className: 'ach' },
+    { ID: 9, Name: 'OB', Points: 28, W: 7, D: 7, L: 12, Played: [], Skill: 4.8, className: 'ob' },    
+    { ID: 1, Name: 'AGF', Points: 25, W: 6, D: 7, L: 13, Played: [], Skill: 2.1, className: 'agf' },
+    { ID: 13, Name: 'Viborg', Points: 25, W: 6, D: 7, L: 13, Played: [], Skill: 2.1, className: 'vff' },
+    { ID: 3, Name: 'Esbjerg', Points: 24, W: 5, D: 9, L: 12, Played: [], Skill: 1.7, className: 'efb' }
 ];
 
 export const firstDiv = [
