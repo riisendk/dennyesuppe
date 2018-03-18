@@ -14,11 +14,11 @@ class Stage1IntroComponent extends React.Component {
         return (
             <div className="step-2">
                 <h2>Fase 1 - Grundspillet</h2>
-                <p>Som nævnt er turneringen to-delt. Da det i 2015/16-sæsonen kun var Hobro, der rykkede ned, og vi samtidig havde tre oprykkere fra 1. division i form af Lyngby, Silkeborg og Horsens, er der nu 14 hold i Superligaen.</p>
+                <p>Som nævnt er turneringen to-delt. Efter 2016/17-sæsonen rykkede Hobro og Helsingør op fra 1. division.</p>
                 <ul className="teams">
                     {renderTeams}
                 </ul>
-                <p>Disse hold møder, i det vi kalder grundspillet, hinanden ude og hjemme – i alt 26 kampe. Sidste runde af grundspillet blev afviklet søndag d. 19. marts 2017.</p>
+                <p>Disse hold møder, i det vi kalder grundspillet, hinanden ude og hjemme – i alt 26 kampe. Sidste runde af grundspillet i 2017/18-sæsonen blev afviklet søndag d. 18. marts 2018.</p>
                 <p className="button">
                     <Link to={'stage1-simulated'}>Vis resultatet af grundspillet</Link>
                 </p>
